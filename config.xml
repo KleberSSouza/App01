@@ -1,0 +1,44 @@
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="br.com.pesquisadata.sample" version="1.0.0">
+  <name>Questionario dos Alunos</name>
+  <description>Questionário dos Alunos</description>
+  <author href="" email="">Kleso Informática</author>
+  <content src="index.html"/>
+
+  <preference name="phonegap-version" value="cli-5.2.0" />
+  <xpreference name="phonegap-version" value="3.7.0" />
+
+  <preference name="orientation" value="default"/>
+  <preference name="fullscreen" value="true"/>
+
+  <preference name="permissions" value="none"/>
+
+  <preference name="webviewbounce" value="true"/>
+  <preference name="stay-in-webview" value="false"/>
+  <preference name="ios-statusbarstyle" value="black-opaque"/>
+
+  <preference name="exit-on-suspend" value="false"/>
+  <preference name="show-splash-screen-spinner" value="true"/>
+  <preference name="auto-hide-splash-screen" value="true"/>
+  <preference name="disable-cursor" value="false"/>
+
+  <preference name="android-targetSdkVersion" value="19"/>
+  <preference name="android-minSdkVersion" value="19"/>
+  <preference name="android-maxSdkVersion" value="19"/>
+  <preference name="android-installLocation" value="auto"/>
+
+  <icon src="icon.png"/>
+
+  <access origin="*"/>
+  <plugin name="cordova-plugin-whitelist" version="1"/>
+  <allow-intent href="http://*/*"/>
+  <allow-intent href="https://*/*"/>
+  <allow-intent href="tel:*"/>
+  <allow-intent href="sms:*"/>
+  <allow-intent href="mailto:*"/>
+  <allow-intent href="geo:*"/>
+
+  <platform name="android">
+    <allow-intent href="market:*"/>
+  </platform>
+
+</widget>
