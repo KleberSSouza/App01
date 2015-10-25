@@ -1,17 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta http-equiv="Content-type" content="text/html;charset=ISO-8859-1" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <meta name="description" content="">
+        <meta name="author" content="KLESO Informática">
+        <title>Pesquisa Sobre Clima Escolar</title>
+
+<!--
+Gravar informações
+Atualizar informações
+
+file:///C:/copia%2020140511/Samuel/Clima%20e%20Funcionamento%20da%20Escola/web/index_aluno.html
+
+
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+
+    <head>
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="msapplication-tap-highlight" content="no" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
-<!--
-        <title>Hello World</title>
-    </head>
 
   <head>
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
@@ -19,12 +34,8 @@
 
     <meta http-equiv="Content-type" content="text/html;charset=ISO-8859-1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">  -->
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="KLESO Informática">
--->
-    <title>Pesquisa Sobre Clima Escolar</title>
 
     <!-- Bootstrap core CSS -->
     <link href="./css/bootstrap.min.css" rel="stylesheet">
@@ -32,7 +43,7 @@
     <link href="./css/bootstrap-theme.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="theme.css" rel="stylesheet">
+    <link href="./css/theme.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="./js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -44,8 +55,10 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <script language='Javascript' src='./js/utfmt002.js'></script>
+
     <SCRIPT>
-      var PergAtual = 105;
+      var PergAtual = 1;
       var NPg2 = 1;
       var flgTp2 = false;
 
@@ -353,44 +366,478 @@
       for (Ind = 0; Ind <= 9; Ind++) {
           Resp2[Ind] = 0;
       }
+      var Resp3 = [];
+      for (Ind = 0; Ind <= 7; Ind++) {
+          Resp3[Ind] = 0;
+      }
+
+    var Escola = [];
+    var Turma = [];
+
+    Escola[1] = '01'; Turma[1] = '1ªN01 - EM - 1ª série, ENSINO MÉDIO - NOITE';
+    Escola[2] = '01'; Turma[2] = '3ªN01- EM - 3ª série, ENSINO MÉDIO - NOITE';
+    Escola[3] = '01'; Turma[3] = '2ªM01- EM - 2ª série, ENSINO MÉDIO - MANHA';
+    Escola[4] = '02'; Turma[4] = '2ª V01-EM - 2ª série, ENSINO MÉDIO - TARDE';
+    Escola[5] = '02'; Turma[5] = '2ª M01-EM - 2ª série, ENSINO MÉDIO - MANHA';
+    Escola[6] = '03'; Turma[6] = '2ª M01-EM - 2ª série, ENSINO MÉDIO - MANHA';
+    Escola[7] = '03'; Turma[7] = '2ª M02-EM - 2ª série, ENSINO MÉDIO - MANHA';
+    Escola[8] = '03'; Turma[8] = '3ª M01-EM - 3ª série, ENSINO MÉDIO - MANHA';
+    Escola[9] = '04'; Turma[9] = '1ªV02-EM - 1ª série, ENSINO MÉDIO - TARDE';
+    Escola[10] = '04'; Turma[10] = '2ªV01-EM - 2ª série, ENSINO MÉDIO - TARDE';
+    Escola[11] = '05'; Turma[11] = '1ª M02-EM - 1ª série, ENSINO MÉDIO - MANHA';
+    Escola[12] = '05'; Turma[12] = '2ªM2EMIRH - 2ºANO série, ENSINO MÉDIO INTEGRADO - MANHA';
+    Escola[13] = '06'; Turma[13] = '1ª N01-EM - 1ª série, ENSINO MÉDIO - NOITE';
+    Escola[14] = '06'; Turma[14] = '3ª N01-EM - 3ª série, ENSINO MÉDIO - NOITE';
+    Escola[15] = '07'; Turma[15] = '2ªM02-EM - 2ª série, ENSINO MÉDIO - MANHA';
+    Escola[16] = '07'; Turma[16] = '3ªN01-EM - 3ª série, ENSINO MÉDIO - NOITE';
+    Escola[17] = '08'; Turma[17] = '2ªV1EMIMEI - 2ºANO série, ENSINO MÉDIO INTEGRADO - TARDE';
+    Escola[18] = '08'; Turma[18] = '1ªV1EMIMEI - 1ºANO série, ENSINO MÉDIO INTEGRADO - TARDE';
+    Escola[19] = '08'; Turma[19] = '3ª N01-EM - 3ª série, ENSINO MÉDIO - NOITE';
+    Escola[20] = '08'; Turma[20] = '2ª N01-EM - 2ª série, ENSINO MÉDIO - NOITE';
+    Escola[21] = '09'; Turma[21] = '1ª N01-EM - 1ª série, ENSINO MÉDIO - NOITE';
+    Escola[22] = '09'; Turma[22] = '3ª M01-EM - 3ª série, ENSINO MÉDIO - MANHA';
+    Escola[23] = '09'; Turma[23] = '1ª V01-EM - 1ª série, ENSINO MÉDIO - TARDE';
+    Escola[24] = '10'; Turma[24] = '2ª M01-EM - 2ª série, ENSINO MÉDIO - MANHA';
+    Escola[25] = '10'; Turma[25] = '3ª N01-EM - 3ª série, ENSINO MÉDIO - NOITE';
+    Escola[26] = '10'; Turma[26] = '1ª M01-EM - 1ª série, ENSINO MÉDIO - MANHA';
+    Escola[27] = '11'; Turma[27] = '3ªN01-EM - 3ª série, ENSINO MÉDIO - NOITE';
+    Escola[28] = '11'; Turma[28] = '2ªM02-EM - 2ª série, ENSINO MÉDIO - MANHA';
+    Escola[29] = '11'; Turma[29] = '3ªM01-EM - 3ª série, ENSINO MÉDIO - MANHA';
+    Escola[30] = '12'; Turma[30] = '3ª N02-EM - 3ª série, ENSINO MÉDIO - NOITE';
+    Escola[31] = '12'; Turma[31] = '1ªM1EMIINF - 1ºANO série, ENSINO MÉDIO INTEGRADO - MANHA';
+    Escola[32] = '13'; Turma[32] = '2ª M01-EM - 2ª série, ENSINO MÉDIO - MANHA';
+    Escola[33] = '13'; Turma[33] = '1ª M02-EM - 1ª série, ENSINO MÉDIO - MANHA';
+    Escola[34] = '14'; Turma[34] = '2ªM02-EM - 2ª série, ENSINO MÉDIO - MANHA';
+    Escola[35] = '14'; Turma[35] = '3ªV01-EM - 3ª série, ENSINO MÉDIO - TARDE';
+    Escola[36] = '14'; Turma[36] = '1ªM03-EM - 1ª série, ENSINO MÉDIO - MANHA';
+    Escola[37] = '15'; Turma[37] = '2ª N01-EM - 2ª série, ENSINO MÉDIO - NOITE';
+    Escola[38] = '15'; Turma[38] = '3ª M01-EM - 3ª série, ENSINO MÉDIO - MANHA';
+    Escola[39] = '15'; Turma[39] = '2ª M02-EM - 2ª série, ENSINO MÉDIO - MANHA';
+    Escola[40] = '16'; Turma[40] = '1ª M05-EM - 1ª série, ENSINO MÉDIO - MANHA';
+    Escola[41] = '16'; Turma[41] = '1ª M03-EM - 1ª série, ENSINO MÉDIO - MANHA';
+    Escola[42] = '17'; Turma[42] = '1ª M03-EM - 1ª série, ENSINO MÉDIO - MANHA';
+    Escola[43] = '17'; Turma[43] = '1ª M02-EM - 1ª série, ENSINO MÉDIO - MANHA';
+    Escola[44] = '18'; Turma[44] = '1ªM03-EM - 1ª série, ENSINO MÉDIO - MANHA';
+    Escola[45] = '18'; Turma[45] = '1ªM01-EM - 1ª série, ENSINO MÉDIO - MANHA';
+    Escola[46] = '19'; Turma[46] = '1ª M07-EM - 1ª série, ENSINO MÉDIO - MANHA';
+    Escola[47] = '19'; Turma[47] = '2ª M03-EM - 2ª série, ENSINO MÉDIO - MANHA';
+    Escola[48] = '19'; Turma[48] = ' 2ª M01-EM - 2ª série, ENSINO MÉDIO - MANHA';
+    Escola[49] = '20'; Turma[49] = '1ª N01-EM - 1ª série, ENSINO MÉDIO - NOITE';
+    Escola[50] = '20'; Turma[50] = '1ª M01-EM - 1ª série, ENSINO MÉDIO - MANHA';
+    Escola[51] = '21'; Turma[51] = '3ªM01-EM - 3ª série, ENSINO MÉDIO - MANHA';
+    Escola[52] = '21'; Turma[52] = '2ªM04-EM - 2ª série, ENSINO MÉDIO - MANHA';
+    Escola[53] = '21'; Turma[53] = '1ªM02-EM - 1ª série, ENSINO MÉDIO - MANHA';
+    Escola[54] = '22'; Turma[54] = '3ª N02-EM - 3ª série, ENSINO MÉDIO - NOITE';
+    Escola[55] = '22'; Turma[55] = '1ª M01-EM - 1ª série, ENSINO MÉDIO - MANHA';
+    Escola[56] = '22'; Turma[56] = '2ª M01-EM - 2ª série, ENSINO MÉDIO - MANHA';
+    Escola[57] = '23'; Turma[57] = '1ªV01-EM - 1ª série, ENSINO MÉDIO - TARDE';
+    Escola[58] = '23'; Turma[58] = '3ªV02-EM - 3ª série, ENSINO MÉDIO - TARDE';
+    Escola[59] = '24'; Turma[59] = '1ª M03-EM - 1ª série, ENSINO MÉDIO - MANHA';
+    Escola[60] = '24'; Turma[60] = '2ª M01-EM - 2ª série, ENSINO MÉDIO - MANHA';
+    Escola[61] = '25'; Turma[61] = '2ª M11-EM - 2ª série, ENSINO MÉDIO - MANHA';
+    Escola[62] = '25'; Turma[62] = '2ª M15-EM - 2ª série, ENSINO MÉDIO - MANHA';
+    Escola[63] = '26'; Turma[63] = '1ª V01-EM - 1ª série, ENSINO MÉDIO - TARDE';
+    Escola[64] = '26'; Turma[64] = '3ª N03-EM - 3ª série, ENSINO MÉDIO - NOITE';
+    Escola[65] = '26'; Turma[65] = '3ª V01-EM - 3ª série, ENSINO MÉDIO - TARDE';
+    Escola[66] = '27'; Turma[66] = '1ª N 01 - 1ª série, ENSINO MÉDIO - NOITE';
+    Escola[67] = '27'; Turma[67] = '3ª M 02 - 3ª série, ENSINO MÉDIO - MANHA';
+    Escola[68] = '28'; Turma[68] = '3ªN01-EM - 3ª série, ENSINO MÉDIO - NOITE';
+    Escola[69] = '28'; Turma[69] = '2ªM03-EM - 2ª série, ENSINO MÉDIO - MANHA';
+    Escola[70] = '28'; Turma[70] = '3ªV01-EM - 3ª série, ENSINO MÉDIO - TARDE';
+    Escola[71] = '29'; Turma[71] = '3M04 - 3ª série, ENSINO MÉDIO - MANHA';
+    Escola[72] = '29'; Turma[72] = '3M01 - 3ª série, ENSINO MÉDIO - MANHA';
+    Escola[73] = '30'; Turma[73] = '1ªM02-EM - 1ª série, ENSINO MÉDIO - MANHA';
+    Escola[74] = '30'; Turma[74] = '1ªM3-EM - 1ª série, ENSINO MÉDIO - MANHA';
+    Escola[75] = '30'; Turma[75] = '2ªM1-EM - 2ª série, ENSINO MÉDIO - MANHA';
+    Escola[76] = '31'; Turma[76] = '1ª M01- EM - 1ª série, ENSINO MÉDIO - MANHA';
+    Escola[77] = '31'; Turma[77] = '2ª M01- EM - 2ª série, ENSINO MÉDIO - MANHA';
+    Escola[78] = '32'; Turma[78] = '1ª V09-EM - 1ª série, ENSINO MÉDIO - TARDE';
+    Escola[79] = '32'; Turma[79] = '1ª N13-EM - 1ª série, ENSINO MÉDIO - NOITE';
+    Escola[80] = '33'; Turma[80] = '2ª M04-EM - 2ª série, ENSINO MÉDIO - MANHA';
+    Escola[81] = '33'; Turma[81] = '2ª V02-EM - 2ª série, ENSINO MÉDIO - TARDE';
+    Escola[82] = '34'; Turma[82] = '1ª M04-EM - 1ª série, ENSINO MÉDIO - MANHA';
+    Escola[83] = '34'; Turma[83] = '2ª M02-EM - 2ª série, ENSINO MÉDIO - MANHA';
+    Escola[84] = '35'; Turma[84] = '2ª M03-EM - 2ª série, ENSINO MÉDIO - MANHA';
+    Escola[85] = '35'; Turma[85] = '1ª M05-EM - 1ª série, ENSINO MÉDIO - MANHA';
+    Escola[86] = '35'; Turma[86] = '3ª V01-EM - 3ª série, ENSINO MÉDIO - TARDE';
+    Escola[87] = '36'; Turma[87] = '1ª V1EMIMA - 1ºANO série, ENSINO MÉDIO INTEGRADO - TARDE';
+    Escola[88] = '36'; Turma[88] = '2ª M1EMIRH - 2ºANO série, ENSINO MÉDIO INTEGRADO - MANHA';
+    Escola[89] = '36'; Turma[89] = '3ª N01-EM - 3ª série, ENSINO MÉDIO - NOITE';
+    Escola[90] = '37'; Turma[90] = '4ºN01-EMI - 4ºANO série, ENSINO MÉDIO INTEGRADO - NOITE';
+    Escola[91] = '37'; Turma[91] = '3ºV01-EM - 3ª série, ENSINO MÉDIO - TARDE';
+    Escola[92] = '37'; Turma[92] = '1ºM01-EM - 1ª série, ENSINO MÉDIO - MANHA';
+    Escola[93] = '37'; Turma[93] = '3ªN01-EM - 3ª série, ENSINO MÉDIO - NOITE';
+    Escola[94] = '38'; Turma[94] = '1ª N01 EM - 1ª série, ENSINO MÉDIO - NOITE';
+    Escola[95] = '38'; Turma[95] = '3ª M01 EM - 3ª série, ENSINO MÉDIO - MANHA';
+    Escola[96] = '38'; Turma[96] = '1ª M01 EM - 1ª série, ENSINO MÉDIO - MANHA';
+    Escola[97] = '39'; Turma[97] = '2ª N02-EM - 2ª série, ENSINO MÉDIO - NOITE';
+    Escola[98] = '39'; Turma[98] = '1ªM02-EM - 1ª série, ENSINO MÉDIO - MANHA';
+    Escola[99] = '40'; Turma[99] = '2ºM01-EM - 2ª série, ENSINO MÉDIO - MANHA';
+    Escola[100] = '40'; Turma[100] = '2ºM2EMIINF - 2ºANO série, ENSINO MÉDIO INTEGRADO - MANHA';
+    Escola[101] = '40'; Turma[101] = '3ºN03-EM - 3ª série, ENSINO MÉDIO - NOITE';
+    Escola[102] = '40'; Turma[102] = '3ºM01-EM - 3ª série, ENSINO MÉDIO - MANHA';
+    Escola[103] = '41'; Turma[103] = '1º M01-EMI - 1ºANO série, ENSINO MÉDIO INTEGRADO - MANHA';
+    Escola[104] = '41'; Turma[104] = '3º N04-EM - 3ª série, ENSINO MÉDIO - NOITE';
+    Escola[105] = '42'; Turma[105] = '1ºN03-EM - 1ª série, ENSINO MÉDIO - NOITE';
+    Escola[106] = '42'; Turma[106] = '3ºM01-EM - 3ª série, ENSINO MÉDIO - MANHA';
+    Escola[107] = '42'; Turma[107] = '3ºN02-EM - 3ª série, ENSINO MÉDIO - NOITE';
+    Escola[108] = '42'; Turma[108] = '2ºN02-EM - 2ª série, ENSINO MÉDIO - NOITE';
+    Escola[109] = '43'; Turma[109] = '1ª N01-EM - 1ª série, ENSINO MÉDIO - NOITE';
+    Escola[110] = '43'; Turma[110] = '1ª V01-EM - 1ª série, ENSINO MÉDIO - TARDE';
+    Escola[111] = '43'; Turma[111] = '3ª M02-EM - 3ª série, ENSINO MÉDIO - MANHA';
+    Escola[112] = '43'; Turma[112] = '2ª V01-EM - 2ª série, ENSINO MÉDIO - TARDE';
+    Escola[113] = '44'; Turma[113] = '2ºM1EMILOG - 2ºANO série, ENSINO MÉDIO INTEGRADO - MANHA';
+    Escola[114] = '44'; Turma[114] = '3ºM1EMILOG - 3ºANO série, ENSINO MÉDIO INTEGRADO - MANHA';
+    Escola[115] = '44'; Turma[115] = '2º M01-EM - 2ª série, ENSINO MÉDIO - MANHA';
+    Escola[116] = '44'; Turma[116] = '2º N01-EM - 2ª série, ENSINO MÉDIO - NOITE';
+    Escola[117] = '45'; Turma[117] = '3ª N01-EM - 3ª série, ENSINO MÉDIO - NOITE';
+    Escola[118] = '45'; Turma[118] = '2ª N01-EM - 2ª série, ENSINO MÉDIO - NOITE';
+    Escola[119] = '45'; Turma[119] = '2ª M01-EM - 2ª série, ENSINO MÉDIO - MANHA';
+    Escola[120] = '46'; Turma[120] = '3ª M01-EM - 3ª série, ENSINO MÉDIO - MANHA';
+    Escola[121] = '46'; Turma[121] = '1ª M04-EM - 1ª série, ENSINO MÉDIO - MANHA';
+    Escola[122] = '46'; Turma[122] = '1ª M03-EM - 1ª série, ENSINO MÉDIO - MANHA';
+    Escola[123] = '47'; Turma[123] = '2ª M01-EM - 2ª série, ENSINO MÉDIO - MANHA';
+    Escola[124] = '47'; Turma[124] = '3ª N01-EM - 3ª série, ENSINO MÉDIO - NOITE';
+    Escola[125] = '48'; Turma[125] = '1ª M01-EM - 1ª série, ENSINO MÉDIO - MANHA';
+    Escola[126] = '48'; Turma[126] = '1ª N02-EM - 1ª série, ENSINO MÉDIO - NOITE';
+
+      var GuardaEmail  = ""; 
+      var GuardaEscola = "";
+      var GuardaTurma  = "";
 
       function Guarda(XResp) {
-          Resp[PergAtual] = XResp;
-          document.getElementById("btPrx").disabled = false;
-          if (flgTp2) {
-              Resp2[NPg2] = XResp;
+          if (XResp == "A") {
+            obj = document.getElementById("nmACEITO");
+            document.getElementById("btPrx").disabled = !obj.checked;
+          } else {
+            Resp[PergAtual - 5] = XResp;
+            document.getElementById("btPrx").disabled = false;
+            if (flgTp2) {
+                Resp2[NPg2] = XResp;
+            }
           }
       }
 
-      function GuardaT(XResp) {
+      function GuardaX(XInd, Max) {
+          obj = document.getElementById("Perg" + XInd.toString());
+          Resp3[XInd] = obj.checked;
+
           document.getElementById("btPrx").disabled = true;
-          obj = document.getElementById("Perg0");
-          obj1 = document.getElementById("Perg5");
-          if (XResp == 5 & obj1.checked == true) {
-              obj.value = "";
-              Resp[PergAtual] = 5;
+          for (i=1; i<=Max; i++) {
+              obj = document.getElementById("Perg" + i.toString());
+              if (obj.checked) document.getElementById("btPrx").disabled = false;
+          }
+      }
+
+      function GuardaTxt() {
+          document.getElementById("btPrx").disabled = true;
+          var GTxt = "";
+
+          obj = document.getElementById("PergTxt");
+          GTxt = obj.value;
+          Resp[PergAtual - 5] = GTxt.trim();
+
+          if (GTxt.trim() != "") {
               document.getElementById("btPrx").disabled = false;
-          } else {
-              Resp[PergAtual] = obj.value;
-              if (Resp[PergAtual] != "") {
-                  document.getElementById("btPrx").disabled = false;
+          }
+      }
+
+      function sel_turma() {
+          var obE = document.getElementById("nmESCOLA");
+          var obj = document.getElementById("nmTURMA");
+
+          if (obE.value != "0" && obj.value != "0") {
+              document.getElementById("btPrx").disabled = false;
+          } else
+              document.getElementById("btPrx").disabled = true;
+      }
+
+      function carrega_turmas() {
+          var obE = document.getElementById("nmESCOLA");
+          var obj = document.getElementById("nmTURMA");
+          var option = document.createElement("option");
+
+          var selText = new Array();
+          var selValues = new Array();
+          
+          if (obE != null) {
+              for (i=1; obj.length > 0;i=1) {
+                   obj.remove(0);
+              }
+
+              selText[0]   = "Selecionar Turma";
+              selValues[0] = "0";
+
+              var j = 0;
+              for (i=1; i <= 126; i++) {
+                  if (Escola[i] == obE.value) {
+                      j++;
+                      selValues[j] = j;
+                      selText[j] = Turma[i];
+                  }
+              }
+              Tot = j;
+
+              for(i=0; i<=Tot; i++) {
+                  var newOpt = new Option(selText[i], selValues[i]);
+                  obj.options[i] = newOpt;
+              }                 
+              document.getElementById("btPrx").disabled = true;
+          }
+      }
+
+      function monta_perg(XNPg, XDir) {
+          if (XNPg == 2 && XDir == ">") {
+              obj = document.getElementById("nmSENHA");
+              if (obj != null) {
+                  if (obj.value != '1234') {
+                      alert("Senha inválida!");
+                      XNPg = 1;
+                  }
               }
           }
-      }
-      
-      function monta_perg(NPg, XDir) {
-          var Txt = "";
+          if (XNPg == 119 && XDir == ">") {
+              if (Resp[113] == 2) {
+                  XNPg = 120;
+              }
+          }
+          if (XNPg == 119 && XDir == "<") {
+              if (Resp[113] == 2) {
+                  XNPg = 118;
+              }
+          }
 
-          if (NPg == 124) {
-              Txt += "    <div class='list-group-item' style='background-color:gray; background-image: linear-gradient(to bottom,#C3C3C3 30%,#A0A0A0 100%);'>";
-              Txt += "      <B> Question&aacute;rio Encerrado </B>";
+          var Txt = "";
+          var NPg = XNPg - 5;
+
+          obj = document.getElementById("nmEMAIL");
+          if (obj != null) {
+              GuardaEmail = obj.value;
+          }
+          obj = document.getElementById("nmESCOLA");
+          if (obj != null) {
+              GuardaEscola = obj.value;
+          }
+          obj = document.getElementById("nmTURMA");
+          if (obj != null) {
+              GuardaTurma = obj.value;
+          }
+
+          PergAtual = XNPg;
+
+          if (XNPg == 1) {
+              document.getElementById("btPrx").disabled = false;
+
+              Txt += "    <div class='panel-body' style='background-color:gray; background-image: linear-gradient(to bottom,#C3C3C3 30%,#A0A0A0 100%);'>";
+              Txt += "      <B>SENHA DE ACESSO</B>";
               Txt += "    </div>";
-              Txt += "    <div class='list-group-item'>";
+              Txt += "    <div class='panel-body'>";
               Txt += "              <TABLE width='100%'>";
               Txt += "                <TR><TD colspan='3'>";
               Txt += "                  <div class='form-group' style='margin-right:10px;'>";
-              Txt += "                    <BR>Obrigado por participar da pesquisa<BR>";
-              Txt += "                    <BR>Bl&aacute;, bl&aacute;, bl&aacute;<BR><BR>";
+              Txt += "                    Entre com a senha de acesso ao aplicativo<BR><BR>";
+              Txt += "                      <input name='nmSENHA' id='nmSENHA' type='text' class='form-control' autofocus>";
+              Txt += "                  </div>";
+              Txt += "                </TD></TR>";
+              Txt += "              </TABLE>";
+              Txt += "    </div>";
+
+              var DivHab = document.getElementById("DivPerg");
+              DivHab.innerHTML=Txt;
+          } else 
+          if (XNPg == 2) {
+              document.getElementById("btPrx").disabled = true;
+
+              Txt += "    <div class='panel-body' style='background-color:gray; background-image: linear-gradient(to bottom,#C3C3C3 30%,#A0A0A0 100%);'>";
+              Txt += "      <B>TERMO DE CONSENTIMENTO LIVRE E ESCLARECIDO (resumido)</B> Estudantes";
+              Txt += "    </div>";
+              Txt += "    <div class='panel-body'>";
+              Txt += "              <TABLE width='100%'>";
+              Txt += "                <TR><TD colspan='3'>";
+              Txt += "                  <div class='form-group' style='margin-right:10px;'>";
+              Txt += "                    <B>Em busca de caminhos que promovam a conviv&ecirc;ncia respeitosa em sala de aula todos os dias</B><BR>";
+              Txt += "                    Telma Vinha - Faculdade de Educa&ccedil;&atilde;o - UNICAMP<BR>";
+              Txt += "                    Aprovado pelo Comit&ecirc; de &Eacute;tica em Pesquisa da Unicamp - n&ordm; do CAAE: 32973114.2.0000.5404<BR><BR>";
+              Txt += "                    Voc&ecirc; est&aacute; sendo convidado a participar como volunt&aacute;rio deste estudo que tem como objetivos construir, aplicar e validar question&aacute;rios";
+              Txt += "                    para avaliar o clima escolar.<BR>";
+              Txt += "                    Os participantes desta pesquisa ser&atilde;o gestores, professores e alunos do 7&ordm; ano em diante de escolas p&uacute;blicas e particulares.<BR>";
+              Txt += "                    Voc&ecirc; est&aacute; sendo convidado a preencher o question&aacute;rio a seguir que avalia o clima escolar. A estimativa de tempo necess&aacute;ria para";
+              Txt += "                    respond&ecirc;-lo &eacute; de aproximadamente 40 (quarenta) minutos.<BR>";
+              Txt += "                    A participa&ccedil;&atilde;o nesta pesquisa n&atilde;o oferece riscos ou benef&iacute;cios diretos, mas esperamos que este estudo traga informa&ccedil;&otilde;es";
+              Txt += "                    importantes sobre as quest&otilde;es relativas ao clima escolar, de forma que possa contribuir para a educa&ccedil;&atilde;o de todos.<BR>";
+              Txt += "                    Voc&ecirc; tem a garantia de que a sua identidade ser&aacute; mantida em sigilo. Os dados desta pesquisa poder&atilde;o ser utilizados apenas pela";
+              Txt += "                    pr&oacute;pria unidade escolar e pela equipe de pesquisadores, para fins de avalia&ccedil;&atilde;o do clima escolar, produ&ccedil;&otilde;es acad&ecirc;micas e de";
+              Txt += "                    valida&ccedil;&atilde;o dos instrumentos. Na divulga&ccedil;&atilde;o dos resultados deste estudo, o nome de nenhuma pessoa participante ser&aacute; citado.<BR><BR>";
+              Txt += "                    Ap&oacute;s ter sido esclarecido sobre a natureza da pesquisa, seus objetivos, m&eacute;todos, benef&iacute;cios previstos e";
+              Txt += "                    potenciais riscos, eu voluntariamente:<BR><BR>";
+
+              Txt += "                      <label><input type='checkbox' name='nmACEITO' id='nmACEITO' onClick='Guarda(\"A\");' >&nbsp;ACEITO participar da pesquisa.</label>";
+
+              Txt += "                  </div>";
+              Txt += "                </TD></TR>";
+              Txt += "              </TABLE>";
+              Txt += "    </div>";
+
+              var DivHab = document.getElementById("DivPerg");
+              DivHab.innerHTML=Txt;
+          } else 
+          if (XNPg == 3) {
+              document.getElementById("btPrx").disabled = false;
+
+              Txt += "    <div class='panel-body' style='background-color:gray; background-image: linear-gradient(to bottom,#C3C3C3 30%,#A0A0A0 100%);'>";
+              Txt += "      <B>TERMO DE CONSENTIMENTO LIVRE E ESCLARECIDO (resumido)</B> Estudantes";
+              Txt += "    </div>";
+              Txt += "    <div class='panel-body'>";
+              Txt += "              <TABLE width='100%'>";
+              Txt += "                <TR><TD colspan='3'>";
+              Txt += "                  <div class='form-group' style='margin-right:10px;'>";
+              Txt += "                    &Eacute; um direito seu ter uma via do Termo de Consentimento na &iacute;ntegra. Caso queira receb&ecirc;-la, informe seu";
+              Txt += "                    e.mail abaixo:<BR>";
+              Txt += "                      <input name='nmEMAIL' id='nmEMAIL' type='text' class='form-control' autofocus>";
+              Txt += "                  </div>";
+              Txt += "                </TD></TR>";
+              Txt += "              </TABLE>";
+              Txt += "    </div>";
+
+              var DivHab = document.getElementById("DivPerg");
+              DivHab.innerHTML=Txt;
+
+              obj = document.getElementById("nmEMAIL");
+              obj.value = GuardaEmail;
+          } else 
+          if (XNPg == 4) {
+              document.getElementById("btPrx").disabled = false;
+
+              Txt += "    <div class='panel-body' style='background-color:gray; background-image: linear-gradient(to bottom,#C3C3C3 30%,#A0A0A0 100%);'>";
+              Txt += "      <B>ALUNOS</B>";
+              Txt += "    </div>";
+              Txt += "    <div class='panel-body'>";
+              Txt += "              <TABLE width='100%'>";
+              Txt += "                <TR><TD colspan='3'>";
+              Txt += "                  <div class='form-group' style='margin-right:10px;'>";
+              Txt += "                    <B>Nosso objetivo &eacute; saber o que voc&ecirc; pensa sobre a sua escola.<BR>";
+              Txt += "                    As informa&ccedil;&otilde;es desta pesquisa v&atilde;o nos ajudar a melhorar as rela&ccedil;&otilde;es interpessoais, as condi&ccedil;&otilde;es";
+              Txt += "                    de aprendizagem e o ambiente geral da escola.<BR>";
+              Txt += "                    Esse &eacute; um question&aacute;rio direcionado aos alunos desta institui&ccedil;&atilde;o educacional.<BR>";
+              Txt += "                    Todas as respostas ser&atilde;o tratadas de forma estritamente CONFIDENCIAL.<BR>";
+              Txt += "                    Esse question&aacute;rio &eacute; an&ocirc;nimo, secreto e individual, por isso lhe pedimos que o responda com";
+              Txt += "                    sinceridade e dizendo exatamente o que voc&ecirc; pensa ou sente em rela&ccedil;&atilde;o ao que tem vivenciado";
+              Txt += "                    NOS &Uacute;LTIMOS 3 MESES.<BR>";
+              Txt += "                    Respond&ecirc;-lo &eacute; importante porque possibilitar&aacute; conhecer o que est&aacute; indo bem e o que necessita ser";
+              Txt += "                    melhorado quanto &agrave; conviv&ecirc;ncia escolar.<BR>";
+              Txt += "                    Por favor, leia cada pergunta atentamente e assinale a(s) alternativa(s) respondendo o que tem";
+              Txt += "                    acontecido em sua escola. Suas respostas ser&atilde;o agrupadas com as dos demais alunos para";
+              Txt += "                    podermos conhecer como todos percebem o clima da escola.<BR>";
+              Txt += "                    Agradecemos muito a sua colabora&ccedil;&atilde;o!<BR>";
+              Txt += "                  </div>";
+              Txt += "                </TD></TR>";
+              Txt += "              </TABLE>";
+              Txt += "    </div>";
+
+              var DivHab = document.getElementById("DivPerg");
+              DivHab.innerHTML=Txt;
+          } else 
+          if (XNPg == 5) {
+              document.getElementById("btPrx").disabled = true;
+
+              Txt += "    <div class='panel-body' style='background-color:gray; background-image: linear-gradient(to bottom,#C3C3C3 30%,#A0A0A0 100%);'>";
+              Txt += "      <B>INFORMA&Ccedil;&Otilde;ES GERAIS</B>";
+              Txt += "    </div>";
+              Txt += "    <div class='panel-body'>";
+              Txt += "              <TABLE width='100%'>";
+              Txt += "                <TR><TD colspan='3'>";
+
+              Txt = Txt + "                  <div class='form-group' style='margin-right:10px;'>";
+              Txt = Txt + "                    <B>Escola:</B><BR>";
+              Txt = Txt + "                    <SELECT name='nmESCOLA' id='nmESCOLA' class='form-control' onchange='carrega_turmas();'>";
+              Txt = Txt + "                        <option selected value='0'>Selecionar Escola  </option>";
+
+              Txt = Txt + "                        <option value='23'>EEEF PROF JOAO ANTUNES DAS DORES </option>";
+              Txt = Txt + "                        <option value='27'>EEEFM AGENOR DE SOUZA LE </option>";
+              Txt = Txt + "                        <option value='36'>EEEFM ALMIRANTE BARROSO </option>";
+              Txt = Txt + "                        <option value='47'>EEEFM ALTO RIO POSSMOSER </option>";
+              Txt = Txt + "                        <option value='03'>EEEFM ANTONIO DOS SANTOS NEVES </option>";
+              Txt = Txt + "                        <option value='25'>EEEFM ARISTOBULO BARBOSA LEAO </option>";
+              Txt = Txt + "                        <option value='16'>EEEFM ATILIO VIVACQUA </option>";
+              Txt = Txt + "                        <option value='11'>EEEFM BANANAL </option>";
+              Txt = Txt + "                        <option value='30'>EEEFM CATHARINA CHEQUER </option>";
+              Txt = Txt + "                        <option value='17'>EEEFM CEL OLIMPIO CUNHA </option>";
+              Txt = Txt + "                        <option value='15'>EEEFM DAVID ROLDI </option>";
+              Txt = Txt + "                        <option value='20'>EEEFM DR JOSE MOYSES </option>";
+              Txt = Txt + "                        <option value='04'>EEEFM ECOPORANGA </option>";
+              Txt = Txt + "                        <option value='48'>EEEFM FIORAVANTE CALIMAN </option>";
+              Txt = Txt + "                        <option value='22'>EEEFM FREDERICO PRETTI </option>";
+              Txt = Txt + "                        <option value='46'>EEEFM GRACA ARANHA </option>";
+              Txt = Txt + "                        <option value='41'>EEEFM HENRIQUE COUTINHO </option>";
+              Txt = Txt + "                        <option value='10'>EEEFM JANUARIO RIBEIRO </option>";
+              Txt = Txt + "                        <option value='07'>EEEFM JOB PIMENTEL </option>";
+              Txt = Txt + "                        <option value='08'>EEEFM JOSE ZAMPROGNO </option>";
+              Txt = Txt + "                        <option value='43'>EEEFM LUIZ JOUFFROY </option>";
+              Txt = Txt + "                        <option value='35'>EEEFM MAJOR ALFREDO PEDRO RABAIOLI </option>";
+              Txt = Txt + "                        <option value='31'>EEEFM MARCILIO DIAS </option>";
+              Txt = Txt + "                        <option value='13'>EEEFM MARITA MOTTA SANTOS </option>";
+              Txt = Txt + "                        <option value='02'>EEEFM MONSENHOR GUILHERME SCHMITZ </option>";
+              Txt = Txt + "                        <option value='24'>EEEFM NOVA CARAPINA </option>";
+              Txt = Txt + "                        <option value='42'>EEEFM P AFONSO BRAZ </option>";
+              Txt = Txt + "                        <option value='39'>EEEFM PEDREIRAS </option>";
+              Txt = Txt + "                        <option value='40'>EEEFM PEDRO DE ALCANTARA GALVEAS </option>";
+              Txt = Txt + "                        <option value='44'>EEEFM PRESIDENTE KENNEDY </option>";
+              Txt = Txt + "                        <option value='21'>EEEFM PROF FILOMENA QUITIBA </option>";
+              Txt = Txt + "                        <option value='28'>EEEFM PROF GERALDO COSTA ALVES </option>";
+              Txt = Txt + "                        <option value='19'>EEEFM PROF MARIA PENEDO </option>";
+              Txt = Txt + "                        <option value='38'>EEEFM PROF PETRONILHA VIDIGAL </option>";
+              Txt = Txt + "                        <option value='05'>EEEFM PROF&ordf; ANTONIETA BANHOS FERNANDES </option>";
+              Txt = Txt + "                        <option value='37'>EEEFM PROFESSOR PEDRO SIMAO </option>";
+              Txt = Txt + "                        <option value='12'>EEEFM SAO GABRIEL DA PALHA </option>";
+              Txt = Txt + "                        <option value='45'>EEEFM SAO LUIS </option>";
+              Txt = Txt + "                        <option value='18'>EEEFM SATURNINO RANGEL MAURO </option>";
+              Txt = Txt + "                        <option value='09'>EEEFM SEBASTIANA GRILO </option>";
+              Txt = Txt + "                        <option value='01'>EEEFM SEBASTIAO COIMBRA ELIZEU    </option>";
+              Txt = Txt + "                        <option value='14'>EEEFM WALLACE CASTELLO DUTRA </option>";
+              Txt = Txt + "                        <option value='26'>EEEFM ZUMBI DOS PALMARES - SERRA </option>";
+              Txt = Txt + "                        <option value='29'>EEEM GODOFREDO SCHNEIDER </option>";
+              Txt = Txt + "                        <option value='34'>EEEM IRMA MARIA HORTA </option>";
+              Txt = Txt + "                        <option value='33'>EEEM MARIO GURGEL </option>";
+              Txt = Txt + "                        <option value='32'>EEEM PROFESSOR AGENOR RORIS </option>";
+              Txt = Txt + "                        <option value='06'>EEEM SANTINA MOROSINI CUPERTINO </option>";
+
+              Txt = Txt + "                    </SELECT>";
+              Txt = Txt + "                  </div>";
+              Txt = Txt + "                  <div class='form-group' style='margin-right:10px;'>";
+              Txt = Txt + "                    <B>Turma:</B><BR>";
+              Txt = Txt + "                    <SELECT name='nmTURMA' id='nmTURMA' class='form-control' onchange='sel_turma();'>";
+              Txt = Txt + "                        <option selected value='0'>Selecionar Turma  </option>";
+              Txt = Txt + "                    </SELECT>";
+              Txt = Txt + "                  </div>";
+              Txt += "                </TD></TR>";
+              Txt += "              </TABLE>";
+              Txt += "    </div>";
+
+              var DivHab = document.getElementById("DivPerg");
+              DivHab.innerHTML=Txt;
+
+              if (GuardaEscola != "") {
+                  obj = document.getElementById("nmESCOLA");
+                  obj.value = GuardaEscola;
+                  carrega_turmas();
+                  if (GuardaEscola != "") {
+                      obj = document.getElementById("nmTURMA");
+                      obj.value = GuardaTurma;
+                      sel_turma();
+                  }
+              }
+          } else 
+          if (NPg == 124) {
+              Txt += "    <div class='panel-body' style='background-color:gray; background-image: linear-gradient(to bottom,#C3C3C3 30%,#A0A0A0 100%);'>";
+              Txt += "      <B> Question&aacute;rio Encerrado </B>";
+              Txt += "    </div>";
+              Txt += "    <div class='panel-body' >";
+              Txt += "              <TABLE width='100%'>";
+              Txt += "                <TR><TD colspan='3'>";
+              Txt += "                  <div class='form-group' style='margin-right:10px;'>";
+              Txt += "                    <BR>Agradecemos muito a sua disposição e cooperação em participar dessa pesquisa.<BR>";
+              Txt += "                    Essas informações serão essenciais para o desenvolvimento de propostas de melhoria";
+              Txt += "                    das relações interpessoais, das condições de aprendizagem e do ambiente geral da escola.<BR><BR><BR>";
               Txt += "                  </div>";
               Txt += "                </TD></TR>";
               Txt += "              </TABLE>";
@@ -404,51 +851,41 @@
               NPg2++;
               if (NPg2 <= 9) {
                   NPg--;
+                  PergAtual--;
               } else flgTp2 = false;
           }
           if (flgTp2 && XDir == "<") {
               NPg2--;
               if (NPg2 >= 1) {
                   NPg++;
+                  PergAtual++;
               } else flgTp2 = false;
           }
 
-          if (NPg == 1) {
-              document.getElementById("btIni").disabled = true;
-              document.getElementById("btAnt").disabled = true;
-          } else {
-              document.getElementById("btIni").disabled = false;
-              document.getElementById("btAnt").disabled = false;
-          }
-         
-          PergAtual = NPg;
           document.getElementById("btPrx").disabled = true;
 
           NSec = vInd[NPg][0];
           NObs = vInd[NPg][1];
           NOpc = vInd[NPg][2];
 
-          Txt += "    <div class='list-group-item' style='background-color:gray; background-image: linear-gradient(to bottom,#C3C3C3 30%,#A0A0A0 100%);'>";
+          Txt += "    <div class='panel-body' style='background-color:gray; background-image: linear-gradient(to bottom,#C3C3C3 30%,#A0A0A0 100%);'>";
           Txt += "      <B>" + vSec[NSec] + "</B>";
           Txt += "    </div>";
-          Txt += "    <div class='list-group-item'>";
+          if (NObs % 2 == 1)
+             Txt += "    <div class='panel-body' style='text-align:left; background-image: linear-gradient(white, #FFFF88, white);'>";
+          else 
+             Txt += "    <div class='panel-body' style='text-align:left; background-image: linear-gradient(white, #BBFFFF, white);'>";
+          Txt += "      <B>" + vObs[NObs] + "</B>";
+          Txt += "    </div>";
+          Txt += "    <div class='panel-body' >";
           Txt += "              <TABLE width='100%'>";
           Txt += "                <TR><TD colspan='3'>";
           Txt += "                  <div class='form-group' style='margin-right:10px;'>";
-          Txt += "                    <BR>" + vObs[NObs] + "<BR><BR>";
 
           if (TpPerg[NPg] == 1) {
-
               Txt += "                    <B>" + vPrg[NPg] + "</B><BR>";
               Txt += "                    <DIV style='margin:5px 20px 5px 20px;'>";
-
-              if (Resp[NPg] == 5) {
-                  Txt += "                      <label><input type='text' name='Perg' id='Perg0' onkeyup='GuardaT(0);' value=''></label><BR>";
-                  Txt += "                      <label><input type='checkbox' name='Perg' id='Perg5' checked onClick='GuardaT(" + TIndr + ");' > N&atilde;o Desejo Responder </label>";
-              } else {
-                  Txt += "                      <label><input type='text' name='Perg' id='Perg0' onkeyup='GuardaT(0);' value='" + Resp[NPg] + "'></label><BR>";
-                  Txt += "                      <label><input type='checkbox' name='Perg' id='Perg5' onClick='GuardaT(" + TIndr + ");' > N&atilde;o Desejo Responder </label>";
-              }
+              Txt += "                      <input name='PergTxt' id='PergTxt' type='text' onkeyup='GuardaTxt();' class='form-control' autofocus onKeyDown='utfmt002_formato=\"num\";'>";
   
               if (Resp[NPg] != "") { 
                   document.getElementById("btPrx").disabled = false;
@@ -456,7 +893,8 @@
 
               Txt += "                    </DIV>";
 
-          } else 
+          } else {
+
           if (TpPerg[NPg] == 2) {
               if (!flgTp2) {
                    if (XDir == ">") {
@@ -485,7 +923,7 @@
                           document.getElementById("btPrx").disabled = false;
                       }
                   }
-                  Txt += "                      <label><input type='radio' name='Perg' id='Perg" + TIndr + "' " + TChecked + " onClick='Guarda(" + TIndr + ");' >" + vOpc[NOpc][index] + "</label><BR>";
+                  Txt += "                      <label><input type='radio' name='Perg' id='Perg" + TIndr + "' " + TChecked + " onClick='Guarda(" + TIndr + ");' >&nbsp;" + vOpc[NOpc][index] + "</label><BR>";
               }
 
               Indr = index + 1;
@@ -502,17 +940,12 @@
                   }
               }
 
-              Txt += "                      <label><input type='radio' name='Perg' id='Perg" + TIndr + "' " + TChecked + " onClick='Guarda(" + TIndr + ");' > N&atilde;o Desejo Responder </label>";
               Txt += "                    </DIV>";
 
           } else {
+
               Txt += "                    <B>" + vPrg[NPg] + "</B><BR>";
               Txt += "                    <DIV style='margin:5px 20px 5px 20px;'>";
-
-              if (TpPerg[NPg] == 3) 
-                  XTipo = "checkbox";
-              else 
-                  XTipo = "radio";
 
               for (index = 0; index < vOpc[NOpc].length; index++) {
                   Indr = index + 1;
@@ -522,7 +955,10 @@
                       TChecked = " checked "; 
                       document.getElementById("btPrx").disabled = false;
                   }
-                  Txt += "                      <label><input type='" + XTipo + "' name='Perg' id='Perg" + TIndr + "' " + TChecked + " onClick='Guarda(" + TIndr + ");' >" + vOpc[NOpc][index] + "</label><BR>";
+                  if (TpPerg[NPg] == 3) 
+                      Txt += "                      <label><input type='checkbox' name='Perg' id='Perg" + TIndr + "' " + TChecked + " onClick='GuardaX(" + TIndr + "," + vOpc[NOpc].length.toString() + ");' >&nbsp;" + vOpc[NOpc][index] + "</label><BR>";
+                  else 
+                      Txt += "                      <label><input type='radio' name='Perg' id='Perg" + TIndr + "' " + TChecked + " onClick='Guarda(" + TIndr + ");' >&nbsp;" + vOpc[NOpc][index] + "</label><BR>";
               }
 
               Indr = index + 1;
@@ -532,9 +968,8 @@
                   document.getElementById("btPrx").disabled = false;
               }
 
-              Txt += "                      <label><input type='" + XTipo + "' name='Perg' id='Perg" + TIndr + "' " + TChecked + " onClick='Guarda(" + TIndr + ");' > N&atilde;o Desejo Responder </label>";
               Txt += "                    </DIV>";
-          }
+          } }
 
           Txt += "                  </div>";
           Txt += "                </TD></TR>";
@@ -543,47 +978,32 @@
 
           var DivHab = document.getElementById("DivPerg");
           DivHab.innerHTML=Txt;
-      }
-//***********************8
 
-          if (NPg < 124) {
-              var TxtFt = "";
-
-              TxtFt += "<TABLE WIDTH='100%'>";
-              TxtFt += "<TR><TD style='text-align:left;'>";
-              TxtFt += "              <A href='http:\\www.opesociais.com.br' data-toggle='tooltip' data-placement='bottom' title='www.opesociais.com.br'>Oportunidades Pesquisa e Estudos Sociais</A>";
-              TxtFt += "</TD><TD style='text-align:right;'>";
-              TxtFt += "        <button id='btIni' type='button' class='btn btn-primary' onclick='monta_perg(1, \"<\");'>In&iacute;cio</button>&nbsp;";
-              TxtFt += "        <button id='btAnt' type='button' class='btn btn-primary' onclick='monta_perg(PergAtual-1, \"<\");'>Anterior</button>&nbsp;";
-              if (NPg == 123) {
-                  TxtFt += "        <button id='btPrx' type='button' class='btn btn-primary' onclick='monta_perg(PergAtual+1, \">\");' disabled >Encerrar</button>&nbsp;";
-              } else {
-                  TxtFt += "        <button id='btPrx' type='button' class='btn btn-primary' onclick='monta_perg(PergAtual+1, \">\");' disabled >Pr&oacute;ximo</button>&nbsp;";
+          if (TpPerg[NPg] == 1) {
+              obj = document.getElementById("PergTxt");
+              obj.value = Resp[NPg];
+          }
+          if (TpPerg[NPg] == 3) {
+              for (i=1; i<=vOpc[NOpc].length; i++) {
+                  obj = document.getElementById("Perg" + i.toString());
+                  obj.checked = Resp3[i];
+                  if (obj.checked) document.getElementById("btPrx").disabled = false;
               }
-              TxtFt += "</TD></TR>";
-              TxtFt += "</TABLE>";
-
-              var SitbtPrx = document.getElementById("btPrx").disabled;
-
-              var DivFot = document.getElementById("DivFoot");
-              DivFot.innerHTML=TxtFt;
-
-              document.getElementById("btPrx").disabled = SitbtPrx
-
-          } else  {
-              var TxtFt = "";
-
-              TxtFt += "<TABLE WIDTH='100%'>";
-              TxtFt += "<TR><TD style='text-align:left;'>";
-              TxtFt += "              <A href='http:\\www.opesociais.com.br' data-toggle='tooltip' data-placement='bottom' title='www.opesociais.com.br'>Oportunidades Pesquisa e Estudos Sociais</A>";
-              TxtFt += "</TD><TD style='text-align:right;'>";
-              TxtFt += "</TD></TR>";
-              TxtFt += "</TABLE>";
-
-              var DivFot = document.getElementById("DivFoot");
-              DivFot.innerHTML=TxtFt;
           }
 
+      }
+
+          if (NPg == 124) {
+              document.getElementById("btAnt").style.display = "none";
+              document.getElementById("btPrx").style.display = "none";
+              document.getElementById("btEnc").style.display = "inline";
+          }
+
+          if (XNPg == 1) {
+              document.getElementById("btAnt").disabled = true;
+          } else {
+              document.getElementById("btAnt").disabled = false;
+          }         
 
       }
 
@@ -598,7 +1018,8 @@
   
           
       function Entrada() {
-          monta_perg(1);
+          document.onkeydown = utfmt002_keyDown;                                                           
+          monta_perg(128);
       }
 
       function jsExibe(Tipo) {
@@ -1029,6 +1450,24 @@ function rawurlencode(str) {
           obj.submit();    
       }
 
+      function Sair() {
+alert(device.name);
+alert('a');
+        if (navigator.app) {
+alert('b');
+            navigator.app.exitApp();
+        }
+        else if (navigator.device) {
+alert('c');
+            navigator.device.exitApp();
+        }
+        else  {
+alert('d');
+            device.exitApp();
+alert('e');
+        }
+      }
+
     </SCRIPT>
 
   </head>
@@ -1036,44 +1475,15 @@ function rawurlencode(str) {
 <!-- style="background-image: url('./img/FGV-fundo2.jpg');" -->
   <body role="document"  onload="Entrada();">
 
-    <!-- Fixed navbar -->
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-            <div class="navbar-form navbar-right">
 
-                <span style="color:white; padding-right:10px;padding-left:80px;"><B>Tablet:</B>&nbsp;001</span>            
-
-            </div>
-        </div><!--/.navbar-collapse -->
-      </div>
-    </nav>
-
-    <div class="container theme-showcase" role="main">
-
-<BR><BR><BR>
+    <div class="container theme-showcase" role="main" style="margin-top:5px;">
 
           <div class="panel panel-default">
-            <div class="panel-heading">
-              
-                <TABLE WIDTH='100%'>
-                  <TR><TD style="text-align:center;">
-                    <h1 class="panel-title" style="font-size:20px;">
-                      <B>Pesquisa Sobre Clima Escolar - ALUNOS</B>
-                    </h1>
-                  </TD></TR>
-                </TABLE>
-
+            <div class="panel-heading" style='color:white; background-image: linear-gradient(#052142, #052142);'>              
+              <CENTER><h1 class="panel-title" style="font-size:20px;">
+                <B>Pesquisa Sobre Clima Escolar - ALUNOS</B>
+              </h1>
             </div>
-            <div class="panel-body">
 <CENTER>
 
           <form name="CLI_form" method="post" id="CLI_form" action="">
@@ -1081,31 +1491,49 @@ function rawurlencode(str) {
               <input name="pass"  type="hidden" value="123>">
               <input name="xparm" type="hidden" value="123">
 
-<div class="list-group" id="DivPerg">
+<div id="DivPerg">
 </div>
-
 
           </form>
 
-            </div>
-            <div id="DivFoot" class="panel-footer" style="opacity: 1;">
 
-<TABLE WIDTH='100%'>
-<TR><TD style="text-align:left;">
-              <A href="http:\\www.opesociais.com.br" data-toggle="tooltip" data-placement="bottom" title="www.opesociais.com.br">Oportunidades Pesquisa e Estudos Sociais</A>
-</TD><TD style="text-align:right;">
-        <button id="btIni" type="button" class="btn btn-primary" onclick="alert('foi');">In&iacute;cio</button>&nbsp;
-        <button id="btAnt" type="button" class="btn btn-primary" onclick="monta_perg(PergAtual-1, '<');">Anterior</button>&nbsp;
-        <button id="btPrx" type="button" class="btn btn-primary" onclick="monta_perg(PergAtual+1, '>');" disabled >Pr&oacute;ximo</button>&nbsp;
-</TD></TR>
-</TABLE>
-            </div>
+
           </div>
 
     </div> <!-- /container -->
 
+<BR><BR><BR><BR>
+<nav id="DivFoot" class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header" style="height:80px;">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <span class="navbar-brand" style="font-size:13px;">Realização:</span>
+      <a class="navbar-brand" href="http:\\www.opesociais.com.br" data-toggle="tooltip" data-placement="bottom" title="www.opesociais.com.br"><IMG SRC="./img/unicamp.png"  alt="Unicamp" height="50"></IMG></A>
+      <a class="navbar-brand" href="http:\\www.opesociais.com.br" data-toggle="tooltip" data-placement="bottom" title="www.opesociais.com.br"><IMG SRC="./img/unesp.png"  alt="Unesp" height="30"></IMG></A>
+      <a class="navbar-brand" href="http:\\www.opesociais.com.br" data-toggle="tooltip" data-placement="bottom" title="www.opesociais.com.br"><IMG SRC="./img/insper-pos.png"  alt="Insper" height="30"></IMG></A>
+      <a class="navbar-brand" href="http:\\www.opesociais.com.br" data-toggle="tooltip" data-placement="bottom" title="www.opesociais.com.br"><IMG SRC="./img/logo.png"  alt="Unicamp" height="40"></IMG></A>
+    </div>
+
+    <div class="collapse navbar-collapse navbar-right" id="collapse1">
+      <div class="btn-group" role="group" aria-label="asd1">
+        <button id='btAnt' type='button' class='btn btn-primary navbar-btn' onclick='monta_perg(PergAtual-1, "<");'>Anterior</button>
+        <button id='btPrx' type='button' class='btn btn-primary navbar-btn' onclick='monta_perg(PergAtual+1, ">");' disabled >Pr&oacute;ximo</button>
+      </div>
+      <div class="btn-group" role="group" aria-label="asd2">
+        <button id='btEnc' type='button' class='btn btn-primary navbar-btn' onclick='Sair();' style='display:none;'>Encerrar</button>
+      </div>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
 
 </div>
+    <script src="./js/cordova.js"></script>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -1124,6 +1552,7 @@ function rawurlencode(str) {
     });
     </script>
 
+
   </body>
 </html>
 
@@ -1132,4 +1561,5 @@ https://bootstrap-datepicker.readthedocs.org/en/latest/
 
 
 -->
+
 
